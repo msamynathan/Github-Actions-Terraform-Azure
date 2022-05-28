@@ -1,8 +1,6 @@
 
 on: [push]
 
-//new feature added
-
 name: mysampleproject
 
 jobs:
