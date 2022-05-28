@@ -22,3 +22,4 @@ resource "azurerm_resource_group" "tamops" {
   location = "eastus2"
 }
  
+//new feature added
