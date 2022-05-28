@@ -1,1 +1,13 @@
 
+on: [push]
+
+name: mysampleproject
+
+jobs:
+
+  executesample:
+    runs-on: ubuntu-latest
+    steps:
+      
+    - run: |
+        az group list
