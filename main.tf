@@ -16,7 +16,7 @@ provider   "azurerm"   {
    location   =   "eastus2" 
  } 
 
- resource   "azurerm_resource_group"   "rg"   { 
+ resource   "azurerm_resource_group"   "rg2"   { 
    name   =   "my-fourth-terraform-rg" 
    location   =   "eastus2" 
  } 
