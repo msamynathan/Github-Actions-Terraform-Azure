@@ -28,5 +28,5 @@ provider   "azurerm"   {
 
    data   "azurerm_resource_group"   "test-for-delete"   { 
    name   =   "Test-for-delete" 
-   location   =   "eastus2" 
+   #location   =   "eastus2" 
  } 
