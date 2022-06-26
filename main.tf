@@ -23,16 +23,19 @@ provider   "azurerm"   {
 
  data "azurerm_virtual_network" "datalake" {
    name = "Demo-vNet"
+   resource_group_name      = data.azurerm_resource_group.test-for-delete.name
  }
 
  data "azurerm_subnet" "datalake" {
    name = "Subnet1"
+   resource_group_name      = data.azurerm_resource_group.test-for-delete.name
+   virtual_network_name = data.azurerm_virtual_network.datalake
  }
 
  resource "azurerm_storage_account" "datalake" {
   name                     = "ADLSrawforsynapse"
   resource_group_name      = data.azurerm_resource_group.test-for-delete.name
-  #location                 = data.azurerm_resource_group.test-for-delete.location
+  location                 = "East US"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
