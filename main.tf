@@ -32,7 +32,13 @@ provider   "azurerm"   {
    virtual_network_name = data.azurerm_virtual_network.datalake.name
  }
 
- resource "azurerm_storage_account" "datalake" {
+data "azurerm_netwrok_security_group" "datalake" {
+ name = "NGSforsubnet1"
+resource_group_name      = data.azurerm_resource_group.test-for-delete.name
+
+} 
+
+resource "azurerm_storage_account" "datalake" {
   name                     = "adlsrawforsynapse"
   resource_group_name      = data.azurerm_resource_group.test-for-delete.name
   location                 = "East US"
@@ -44,7 +50,9 @@ provider   "azurerm"   {
   #}
 }
 
-#resource "azurerm_private_endpoint" "aldsraw" {
-#  name = "aldsraw-private-endpoint"
-#  subnet_id = data.azurerm_subnet.datalake.id
-#}
+resource "azurerm_private_endpoint" "aldsraw" {
+  name = "aldsraw-private-endpoint"
+  resource_group_name      = data.azurerm_resource_group.test-for-delete.name
+  location                 = "East US"
+  subnet_id = data.azurerm_subnet.datalake.id
+}
