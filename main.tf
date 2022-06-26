@@ -29,7 +29,7 @@ provider   "azurerm"   {
  data "azurerm_subnet" "datalake" {
    name = "Subnet1"
    resource_group_name      = data.azurerm_resource_group.test-for-delete.name
-   virtual_network_name = data.azurerm_virtual_network.datalake
+   virtual_network_name = data.azurerm_virtual_network.datalake.name
  }
 
  resource "azurerm_storage_account" "datalake" {
