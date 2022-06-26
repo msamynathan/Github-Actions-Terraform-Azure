@@ -11,7 +11,7 @@ provider   "azurerm"   {
     features   {} 
  } 
 
- resource   "azurerm_resource_group"   "rg"   { 
+ data   "azurerm_resource_group"   "rg"   { 
    name   =   "my-third-terraform-rg" 
    location   =   "eastus2" 
  } 
