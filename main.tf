@@ -16,16 +16,6 @@ provider   "azurerm"   {
    #location   =   "eastus2" 
  #} 
 
- resource   "azurerm_resource_group"   "rg5"   { 
-   name   =   "my-fifth-terraform-rg" 
-   location   =   "eastus2" 
- } 
-
-  resource   "azurerm_resource_group"   "rg6"   { 
-   name   =   "my-sixth-terraform-rg" 
-   location   =   "eastus2" 
- } 
-
    data   "azurerm_resource_group"   "test-for-delete"   { 
    name   =   "Test-for-delete" 
    #location   =   "eastus2" 
