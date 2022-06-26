@@ -33,7 +33,7 @@ provider   "azurerm"   {
  }
 
  resource "azurerm_storage_account" "datalake" {
-  name                     = "ADLSrawforsynapse"
+  name                     = "adlsrawforsynapse"
   resource_group_name      = data.azurerm_resource_group.test-for-delete.name
   location                 = "East US"
   account_tier             = "Standard"
