@@ -11,10 +11,10 @@ provider   "azurerm"   {
     features   {} 
  } 
 
- data   "azurerm_resource_group"   "rg"   { 
-   name   =   "my-third-terraform-rg" 
+# data   "azurerm_resource_group"   "rg"   { 
+ #  name   =   "my-third-terraform-rg" 
    #location   =   "eastus2" 
- } 
+ #} 
 
  #resource   "azurerm_resource_group"   "rg5"   { 
  #  name   =   "my-fifth-terraform-rg" 
